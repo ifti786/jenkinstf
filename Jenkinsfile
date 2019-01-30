@@ -23,9 +23,8 @@ pipeline {
                 sh "/terraform/terraform plan ./jenkinstf"
             }
         }
-stage('Terraform ended')
+stage('Terraform ended') {
 	steps {
 	sh 'echo "Terraform deployment end"'
     }
 }
-
