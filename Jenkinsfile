@@ -6,7 +6,7 @@ pipeline {
                 sh 'echo "Started....."'
             }
         }
-	stage('git clone')
+	stage('git clone') {
 	steps {
 		sh 'cd jenkinstf'
 		sh 'rm -rf *'
