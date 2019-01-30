@@ -1,6 +1,11 @@
 pipeline {
-    agent any
+    agent {
+	node {
+		label 'master'
+	  }
+	}
         stages {
+
         stage('Terraform Started') { 
             steps {
                 sh 'echo "Started....."'
@@ -27,4 +32,6 @@ stage('Terraform ended') {
 	steps {
 	sh 'echo "Terraform deployment end"'
     }
+}
+}
 }
