@@ -6,14 +6,21 @@ pipeline {
                 sh 'echo "Started....."'
             }
         }
+	stage('git clone')
+	steps {
+		sh 'cd jenkinstf'
+		sh 'rm -rf *
+		sh 'git clone https://github.com/ifti786/jenkinstf.git'
+		}
+	 }
         stage('Terraform Init') { 
             steps {
-                sh "/terraform/terraform init" 
+                sh "/terraform/terraform init ./jenkinstf" 
             }
         }
         stage('Terraform plan') { 
             steps {
-                sh "/terraform/terraform plan"
+                sh "/terraform/terraform plan ./jenkinstf"
             }
         }
 stage('Terraform ended')
