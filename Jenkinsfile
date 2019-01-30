@@ -13,7 +13,6 @@ pipeline {
         }
 	stage('git clone') {
 	steps {
-		sh 'cd jenkinstf'
 		sh 'rm -rf *'
 		sh 'git clone https://github.com/ifti786/jenkinstf.git'
 		}
