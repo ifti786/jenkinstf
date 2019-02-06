@@ -4,7 +4,7 @@ output "ids" {
 }
 
 output "ids_t2" {
-  description = "List of IDs of t2-type instances"
+  description = "List of IDs of t2-type Instances"
   value       = "${module.ec2_with_t2_unlimited.id}"
 }
 
